@@ -17,44 +17,44 @@ all content is paraphrased and summarized for learning purposes.
 ```
 learn-harness-engineering-notes/
 │
-├── 📁 01-why-capable-agents-still-fail/
-│   └── notes.md
+├── 📁 lecture1-why-capable-agents-still-fail/
+│   └── study-notes.md
 │
-├── 📁 02-what-a-harness-actually-is/
-│   └── notes.md
+├── 📁 lecture2-what-a-harness-actually-is/
+│   └── study-notes.md
 │
-├── 📁 03-why-the-repository-must-become-the-system-of-record/
-│   └── notes.md
+├── 📁 lecture3-why-the-repository-must-become-the-system-of-record/
+│   └── study-notes.md
 │
-├── 📁 04-why-one-giant-instruction-file-fails/
-│   └── notes.md
+├── 📁 lecture4-why-one-giant-instruction-file-fails/
+│   └── study-notes.md
 │
-├── 📁 05-why-long-running-tasks-lose-continuity/
-│   └── notes.md
+├── 📁 lecture5-why-long-running-tasks-lose-continuity/
+│   └── study-notes.md
 │
-├── 📁 06-why-initialization-needs-its-own-phase/
-│   └── notes.md
+├── 📁 lecture6-why-initialization-needs-its-own-phase/
+│   └── study-notes.md
 │
-├── 📁 07-why-agents-overreach-and-under-finish/
-│   └── notes.md
+├── 📁 lecture7-why-agents-overreach-and-under-finish/
+│   └── study-notes.md
 │
-├── 📁 08-why-feature-lists-are-harness-primitives/
-│   └── notes.md
+├── 📁 lecture8-why-feature-lists-are-harness-primitives/
+│   └── study-notes.md
 │
-├── 📁 09-why-agents-declare-victory-too-early/
-│   └── notes.md
+├── 📁 lecture9-why-agents-declare-victory-too-early/
+│   └── study-notes.md
 │
-├── 📁 10-why-end-to-end-testing-changes-results/
-│   └── notes.md
+├── 📁 lecture10-why-end-to-end-testing-changes-results/
+│   └── study-notes.md
 │
-├── 📁 11-why-observability-belongs-inside-the-harness/
-│   └── notes.md
+├── 📁 lecture11-why-observability-belongs-inside-the-harness/
+│   └── study-notes.md
 │
-├── 📁 12-why-every-session-must-leave-a-clean-state/
-│   └── notes.md
+├── 📁 lecture12-why-every-session-must-leave-a-clean-state/
+│   └── study-notes.md
 │
-├── 📁 13-from-manual-prompting-to-autonomous-loops/
-│   └── notes.md
+├── 📁 lecture13-from-manual-prompting-to-autonomous-loops/
+│   └── study-notes.md
 │
 ├── 📁 resources/
 │   ├── links.md
