@@ -47,17 +47,15 @@ python main.py
 
 ```
 2D-retro-game-editor-with-harness/
-├── editor/
-│   ├── __init__.py
-│   ├── app.py          ← main editor loop
-│   ├── config.py       ← all sizing/color constants
-│   ├── tilemap.py      ← grid data model with JSON save/load
-│   └── tileset.py      ← auto-generates retro pixel-art tileset
-├── tests/
-│   ├── conftest.py     ← headless SDL setup for all tests
-│   ├── test_tilemap.py ← grid bounds, clear, save/load roundtrips
-│   ├── test_tileset.py ← tileset generation, caching, lookups
-│   └── test_app_smoke.py ← full Editor paint/erase/save/load/quit
+├── __init__.py
+├── app.py          ← main editor loop
+├── config.py       ← all sizing/color constants
+├── tilemap.py      ← grid data model with JSON save/load
+├── tileset.py      ← auto-generates retro pixel-art tileset
+├── conftest.py     ← headless SDL setup for all tests
+├── test_tilemap.py ← grid bounds, clear, save/load roundtrips
+├── test_tileset.py ← tileset generation, caching, lookups
+├──  test_app_smoke.py ← full Editor paint/erase/save/load/quit
 ├── maps/               ← saved map JSON files land here
 ├── assets/             ← tileset.png auto-generated on first run
 ├── main.py             ← entry point
