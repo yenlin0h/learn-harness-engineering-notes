@@ -18,6 +18,8 @@ all content is paraphrased and summarized for learning purposes.
 learn-harness-engineering-notes/
 │
 ├── 📁 lecture1-why-capable-agents-still-fail/
+│   ├── 2D-retro-game-editor-exercise
+│   ├── 2D-retro-game-editor-with-harness
 │   └── study-notes.md
 │
 ├── 📁 lecture2-what-a-harness-actually-is/
