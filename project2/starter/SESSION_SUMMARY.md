@@ -47,11 +47,19 @@ Implemented the `document-import` and `document-detail` features from `feature_l
 - `basic-persistence`: left as `not-started`.
 
 ## Time and token cost
-From `/cost`:
 
+### Session A (document-import + document-detail)
 - Total cost: $0.90
 - Duration (API): 3m 32s
 - Duration (wall clock): 15m 6s
 - Code changes: 121 lines added, 28 lines removed
 - Model: claude-sonnet-5 — 5.1k input, 17.8k output, 2.4m cache read, 91.4k cache write tokens
 - Prompt cache: 35 requests, 96% of input tokens served from cache, 1 cache miss
+
+### Session B (basic-persistence)
+- Total cost: $0.4296
+- Duration (API): 1m 19s
+- Duration (wall clock): 7m 55s
+- Code changes: 8 lines added, 4 lines removed
+- Model: claude-sonnet-4-6 — 89 input, 4.0k output, 636.3k cache read, 47.5k cache write tokens
+- Prompt cache: 15 requests, 93% of input tokens from cache, no misses
