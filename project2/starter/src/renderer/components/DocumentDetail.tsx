@@ -15,8 +15,10 @@ export function DocumentDetail({ document, onDelete }: Props) {
     window.knowledgeBase.indexing.chunks(document.id).then(setChunks);
   }, [document.id]);
 
-  // TODO: Load document content for viewing -- not yet implemented
-  // This is part of the document-detail feature to be completed.
+  useEffect(() => {
+    setContent(null);
+    window.knowledgeBase.documents.getContent(document.id).then(setContent);
+  }, [document.id]);
 
   return (
     <div>
@@ -80,7 +82,6 @@ export function DocumentDetail({ document, onDelete }: Props) {
         )}
       </div>
 
-      {/* Content viewer -- placeholder until document-detail feature is implemented */}
       {content && (
         <div style={{
           padding: '16px',

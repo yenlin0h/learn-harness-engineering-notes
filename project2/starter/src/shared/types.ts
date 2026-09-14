@@ -48,7 +48,9 @@ export const IPC_CHANNELS = {
   // Document operations
   LIST_DOCUMENTS: 'documents:list',
   IMPORT_DOCUMENT: 'documents:import',
+  SELECT_IMPORT_FILE: 'documents:selectImportFile',
   GET_DOCUMENT: 'documents:get',
+  GET_DOCUMENT_CONTENT: 'documents:getContent',
   DELETE_DOCUMENT: 'documents:delete',
 
   // Indexing

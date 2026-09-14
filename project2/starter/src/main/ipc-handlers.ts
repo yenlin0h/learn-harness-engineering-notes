@@ -1,4 +1,4 @@
-import { IpcMain } from 'electron';
+import { dialog, IpcMain } from 'electron';
 import { DocumentService } from '../services/document-service';
 import { IndexingService } from '../services/indexing-service';
 import { QaService } from '../services/qa-service';
@@ -22,8 +22,21 @@ export function registerIpcHandlers(ipcMain: IpcMain, services: Services) {
     return documentService.importDocument(filePath);
   });
 
+  ipcMain.handle(IPC_CHANNELS.SELECT_IMPORT_FILE, async () => {
+    const result = await dialog.showOpenDialog({
+      properties: ['openFile'],
+      filters: [{ name: 'Text/Markdown', extensions: ['txt', 'md'] }],
+    });
+    if (result.canceled || result.filePaths.length === 0) return null;
+    return result.filePaths[0];
+  });
+
   ipcMain.handle(IPC_CHANNELS.GET_DOCUMENT, async (_event, id: string) => {
     return documentService.getDocument(id);
+  });
+
+  ipcMain.handle(IPC_CHANNELS.GET_DOCUMENT_CONTENT, async (_event, id: string) => {
+    return documentService.getDocumentContent(id);
   });
 
   ipcMain.handle(IPC_CHANNELS.DELETE_DOCUMENT, async (_event, id: string) => {

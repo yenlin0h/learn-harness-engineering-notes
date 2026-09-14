@@ -12,7 +12,9 @@ declare global {
       documents: {
         list: () => Promise<Document[]>;
         import: (filePath: string) => Promise<Document>;
+        selectImportFile: () => Promise<string | null>;
         get: (id: string) => Promise<Document | null>;
+        getContent: (id: string) => Promise<string | null>;
         delete: (id: string) => Promise<boolean>;
       };
       indexing: {
@@ -51,13 +53,9 @@ export function App() {
   }, []);
 
   const handleImport = useCallback(async (filePath: string) => {
-    try {
-      await window.knowledgeBase.documents.import(filePath);
-      await refreshDocuments();
-      setShowImport(false);
-    } catch (err) {
-      console.error('Import failed:', err);
-    }
+    await window.knowledgeBase.documents.import(filePath);
+    await refreshDocuments();
+    setShowImport(false);
   }, [refreshDocuments]);
 
   const handleSelectDocument = useCallback((doc: Document) => {
