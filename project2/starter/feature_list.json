@@ -54,9 +54,9 @@
       "id": "basic-persistence",
       "name": "Basic Persistence",
       "description": "Imported documents persist across app restarts via filesystem storage",
-      "status": "not-started",
-      "evidence": null,
-      "testedAt": null
+      "status": "pass",
+      "evidence": "PersistenceService and DocumentService already write documents-meta.json and content/<id>.txt on every import/delete. The only missing piece was that App.tsx never called refreshDocuments() on mount — documents stored on disk would not appear in the list on relaunch. Fixed by adding a useEffect(() => { refreshDocuments(); }, []) in App.tsx. Verified end-to-end at the service layer: imported a doc via DocumentService, then constructed fresh PersistenceService + DocumentService instances against the same data directory (simulating a restart), called listDocuments() and getDocumentContent() — both returned the correct data. tsc -p tsconfig.node.json succeeds with no new errors. Electron binary not installed in this sandbox so the window cannot be launched directly.",
+      "testedAt": "2026-09-13T00:00:00Z"
     }
   ]
 }
